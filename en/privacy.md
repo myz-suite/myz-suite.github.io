@@ -2,7 +2,7 @@
 
 **Effective date:** 2026-01-12
 
-MyZ AI Annotator helps you highlight and annotate in your browser, and (optionally) enables AI chat, tool calling, and vector search. MyZ Danmaku Viewer fetches timestamped YouTube comments and renders an on-device floating danmaku layer. This policy explains what data these extensions access, how it is used, and the choices you have.
+MyZ AI Annotator helps you highlight and annotate in your browser, and (optionally) enables AI chat, tool calling, and vector search. MyZ Danmaku Viewer fetches timestamped YouTube comments and renders an on-device floating danmaku layer. ParkingLot is a browser-automation bridge whose extension connects only to a relay you run yourself on `127.0.0.1`, letting an AI agent (or you) drive real browser actions by command. This policy explains what data these extensions access, how it is used, and the choices you have.
 
 ## Data We Store Locally
 
@@ -57,6 +57,16 @@ Important notes:
 
 For MyZ Danmaku Viewer, calling YouTube’s private interface relies on an unofficial channel. Google may rate-limit or block accounts or IPs that issue these requests frequently. If that happens, you are responsible for any access restrictions or playback issues that arise. We cannot compensate or mediate with Google.
 
+## ParkingLot (agent browser bridge)
+
+ParkingLot pairs a Chrome extension (executor) with a `parkinglot-server` relay that you run locally. It is designed local-first; every page action is executed by the extension inside your own browser session:
+
+- **Network**: the extension's WebSocket connects only to your relay (default `ws://127.0.0.1:8787`) after token pairing. We operate no remote service that receives, forwards, or stores commands or page data.
+- **Where data lives**: the pairing token and server URL are kept in the extension's local storage; a JSONL command ledger is written by the relay into your local state dir (default `~/.parkinglot/`), with passwords, tokens and request bodies redacted.
+- **Scope**: commands drive the browser to pages you specify (including sites you are logged into). The extension adds no tracking and sends no telemetry.
+- **Optional capability**: `eval` (arbitrary in-page JS) is disabled by default and requires an explicit opt-in on your own server. Using `search`, `fetch`, or automating logged-in sites means accepting those sites' terms and risk controls.
+- **Your call**: automating third-party sites may trigger their risk controls (CAPTCHA, rate limits, bans). What you automate, where, and how often is your decision and your responsibility.
+
 ## Permissions Explained
 
 - `activeTab` and `tabs`: MyZ AI Annotator reads the current selection and captures screenshots; MyZ Danmaku Viewer identifies which YouTube video is playing.
@@ -64,6 +74,7 @@ For MyZ Danmaku Viewer, calling YouTube’s private interface relies on an unoff
 - YouTube page access: Lets MyZ Danmaku read public comments for the active video so it can produce danmaku locally.
 - `storage`: Required to keep your highlights, danmaku caches, and settings on-device.
 - `scripting`: Used by MyZ Danmaku to add the overlay UI and styles on the page.
+- ParkingLot permissions: `tabs` (list/switch tabs), `scripting` (inject the page command executor), `webNavigation` (track navigation for the navId continuity), `storage` (local server URL + pairing token), `alarms` (service-worker keep-alive), plus `host_permissions <all_urls>` to run commands on whichever page you point it at.
 
 ## No Remote Code Execution
 

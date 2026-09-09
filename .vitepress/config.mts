@@ -18,6 +18,7 @@ export default defineConfig({
         nav: [
           { text: 'MyZ 高亮智能助理', link: '/' },
           { text: 'MyZ 弹幕助手', link: '/myz-danmaku' },
+          { text: 'ParkingLot', link: '/parkinglot/' },
           { text: '隐私政策', link: '/privacy' },
           { text: '用户协议', link: '/tos' }
         ],
@@ -44,6 +45,19 @@ export default defineConfig({
               { text: '用户协议', link: '/tos' }
             ]
           }
+          ],
+          "/parkinglot/": [
+            {
+            text: 'ParkingLot',
+            items: [
+              { text: '概览', link: '/parkinglot/' },
+              { text: '安装指南', link: '/parkinglot/install' },
+              { text: '使用指南', link: '/parkinglot/guide' },
+              { text: '常见问题', link: '/parkinglot/faq' },
+              { text: '隐私政策', link: '/privacy' },
+              { text: '用户协议', link: '/tos' }
+            ]
+          }
           ]
         },
         socialLinks: [
@@ -65,6 +79,7 @@ export default defineConfig({
         nav: [
           { text: 'MyZ AI Annotator', link: '/en/' },
           { text: 'MyZ Danmaku Viewer', link: '/en/myz-danmaku' },
+          { text: 'ParkingLot', link: '/en/parkinglot/' },
           { text: 'Privacy Policy', link: '/en/privacy' },
           { text: 'Terms of Service', link: '/en/tos' }
         ],
@@ -87,6 +102,19 @@ export default defineConfig({
             text: 'MyZ Danmaku Viewer',
             items: [
               { text: 'Guide', link: '/en/danmaku/guide' },
+              { text: 'Privacy Policy', link: '/en/privacy' },
+              { text: 'Terms of Service', link: '/en/tos' }
+            ]
+          }
+          ],
+          "/en/parkinglot/": [
+            {
+            text: 'ParkingLot',
+            items: [
+              { text: 'Overview', link: '/en/parkinglot/' },
+              { text: 'Installation', link: '/en/parkinglot/install' },
+              { text: 'Guide', link: '/en/parkinglot/guide' },
+              { text: 'FAQ', link: '/en/parkinglot/faq' },
               { text: 'Privacy Policy', link: '/en/privacy' },
               { text: 'Terms of Service', link: '/en/tos' }
             ]
