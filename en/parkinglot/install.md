@@ -1,46 +1,62 @@
 # Installation
 
-ParkingLot has two parts: **parkinglot-server** (the local relay) and **parkinglot-extension** (the Chrome extension). Install, then pair them.
+ParkingLot has two parts: **parkinglot-server** (the relay) and **parkinglot-extension** (the Chrome extension). Install the server, install the extension, then pair them.
 
 ## Prerequisites
 
-- **Node.js ≥ 20** and **pnpm ≥ 9** (for the server)
-- **Chrome / Chromium ≥ 120** (for the extension; uses `chrome.alarms` 0.5-min keep-alive)
+- **Node.js ≥ 20** (for the server)
+- **Chrome / Chromium ≥ 120** (for the extension)
 
-## 1. Build & start the server
+## 1. Install & run the server (npm global)
 
 ```bash
-git clone https://github.com/myz-suite/parkinglot.git
-cd parkinglot
-pnpm install
-pnpm build
-
-pnpm --filter @parkinglot/server start    # runs in the foreground
+npm install -g @parkinglot/server
 ```
 
-The startup log prints the listen address and **pair token** (default `http://127.0.0.1:8787`; the token persists in `~/.parkinglot/token` across restarts).
+Run the relay (foreground; Ctrl-C to stop):
 
-## 2. Load the extension in Chrome
+```bash
+plt serve
+```
 
-> Chrome 137+ removed the `--load-extension` CLI flag — use developer mode.
+The startup log prints the listen address and **pair token** (default `http://127.0.0.1:8787`; the token persists in `~/.parkinglot/token`, override with `plt serve --token <custom>`):
 
-1. Open `chrome://extensions`, enable **Developer mode** (top right).
-2. Click **Load unpacked** and select `packages/extension/dist`.
-3. The **ParkingLot** icon appears in the toolbar.
+```
+parkinglot-server listening on http://127.0.0.1:8787
+pair token: e59fd1316be7aa2fb839fd016fbe1b0b589ce08ee6af2db3
+```
+
+> Alternatively run from source: `git clone https://github.com/myz-suite/parkinglot && pnpm install && pnpm build`, then `pnpm --filter @parkinglot/server start`.
+
+## 2. Install the extension (Chrome Web Store)
+
+Open the store page in Chrome and install:
+
+<p><a class="markdown" href="https://chromewebstore.google.com/detail/ajpkphgdonekdpifjhfffffjhikiafdj">🔗 ParkingLot — Chrome Web Store</a></p>
+
+Pin the extension to the toolbar after installing.
 
 ## 3. Pair (once)
 
 1. Open the extension popup.
-2. Enter **Server URL** `http://127.0.0.1:8787` and the server's **pair token**.
+2. Enter **Server URL** `http://127.0.0.1:8787` and the **pair token** printed by `plt serve`.
 3. Click **Save & Connect** — the button becomes **Connected ✓**.
 
-The pairing is stored locally; the extension auto-reconnects after Chrome restarts.
+Pairing is stored locally; the extension auto-reconnects after Chrome restarts.
 
 ## 4. Verify
 
 ```bash
-node packages/server/dist/cli.js status
+plt status
 # extension: connected ✅
 ```
 
-> The CLI binary is **`plt`** (`packages/server/dist/cli.js`). Usage: see the [guide](/en/parkinglot/guide).
+## (Optional) Agent users: install the parkinglot skill
+
+To let an AI agent drive the browser through this stack, install the companion skill:
+
+```bash
+npx skills add myz-suite/parkinglot --skill parkinglot
+```
+
+The skill provides the command reference, the session/tab/navId continuity model and standard workflows (see the [guide](/en/parkinglot/guide)).

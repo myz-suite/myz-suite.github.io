@@ -1,52 +1,62 @@
 # 安装指南
 
-ParkingLot 由两部分组成：**parkinglot-server**（本机 relay）与 **parkinglot-extension**（Chrome 扩展）。安装即把它们跑起来并完成配对。
+ParkingLot 由 **parkinglot-server**（relay）与 **parkinglot-extension**（Chrome 扩展）组成。安装分三步：装 server → 装扩展 → 配对。
 
 ## 前置条件
 
-- **Node.js ≥ 20** 与 **pnpm ≥ 9**（运行 server）
-- **Chrome / Chromium ≥ 120**（运行扩展；依赖 `chrome.alarms` 0.5 分钟周期做 service worker 保活）
+- **Node.js ≥ 20**（运行 server）
+- **Chrome / Chromium ≥ 120**（运行扩展）
 
-## 第 1 步：构建并启动 server
+## 1. 安装并启动 server（npm 全局安装）
 
 ```bash
-git clone https://github.com/myz-suite/parkinglot.git
-cd parkinglot
-pnpm install
-pnpm build
-
-# 启动 relay（前台阻塞，另开终端继续）
-pnpm --filter @parkinglot/server start
+npm install -g @parkinglot/server
 ```
 
-启动输出会给出监听地址与 **pair token**（默认 `http://127.0.0.1:8787`，token 持久化于 `~/.parkinglot/token`，重启不变）：
+启动 relay（前台运行，Ctrl-C 停止）：
+
+```bash
+plt serve
+```
+
+启动日志会给出监听地址与 **pair token**（默认 `http://127.0.0.1:8787`；token 持久化在 `~/.parkinglot/token`，重启不变，可用 `plt serve --token <自定义>` 覆盖）：
 
 ```
 parkinglot-server listening on http://127.0.0.1:8787
 pair token: e59fd1316be7aa2fb839fd016fbe1b0b589ce08ee6af2db3
 ```
 
-## 第 2 步：在 Chrome 加载扩展
+> 也可直接从源码运行：`git clone https://github.com/myz-suite/parkinglot && pnpm install && pnpm build`，再 `pnpm --filter @parkinglot/server start`。
 
-> Chrome 137+ 移除了 `--load-extension` 命令行参数，必须用开发者模式加载。
+## 2. 安装扩展（Chrome Web Store）
 
-1. 打开 `chrome://extensions`，开启右上角**开发者模式**；
-2. 点**加载已解压的扩展程序**，选择 `packages/extension/dist`；
-3. 工具栏出现 **ParkingLot** 图标。
+在 Chrome 中打开商店页并点击安装：
 
-## 第 3 步：配对（一次性）
+<p><a class="markdown" href="https://chromewebstore.google.com/detail/ajpkphgdonekdpifjhfffffjhikiafdj">🔗 ParkingLot — Chrome Web Store</a></p>
+
+安装后把扩展固定到工具栏。
+
+## 3. 配对（一次性）
 
 1. 点扩展图标打开 popup；
-2. 填入 **Server URL** `http://127.0.0.1:8787` 与 server 输出的 **pair token**；
+2. 填入 **Server URL** `http://127.0.0.1:8787` 与 `plt serve` 输出的 **pair token**；
 3. 点 **Save & Connect**，按钮变为 **Connected ✓** 即成功。
 
-配对信息保存在扩展本地存储，Chrome 重启后扩展会自动重连，无需重复操作。
+配对信息保存在扩展本地，Chrome 重启后会自动重连，无需重复操作。
 
-## 第 4 步：验证
+## 4. 验证
 
 ```bash
-node packages/server/dist/cli.js status
+plt status
 # extension: connected ✅
 ```
 
-> CLI 命令名是 **`plt`**（`packages/server/dist/cli.js`）。后续使用见[使用指南](/parkinglot/guide)。
+## （可选）Agent 用户：安装 parkinglot skill
+
+若你要让 AI Agent 通过 `pl`-类 CLI 控制浏览器，可在目标环境中安装配套 skill：
+
+```bash
+npx skills add myz-suite/parkinglot --skill parkinglot
+```
+
+skill 会提供命令参考、session 连续性心智模型与标准工作流（详见[使用指南](/parkinglot/guide)）。

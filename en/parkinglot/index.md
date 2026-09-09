@@ -7,10 +7,10 @@ hero:
   tagline: >
     Turn <code>goto / click / extract / screenshot / search / fetch</code> into real
     browser actions through a local relay — with your own login state and cookies<br/>
-    <a href="https://github.com/myz-suite/parkinglot"><img style="display: inline" src="https://img.shields.io/badge/GitHub-myz--suite%2Fparkinglot-1a6de0"/></a>
+    <a href="https://chromewebstore.google.com/detail/ajpkphgdonekdpifjhfffffjhikiafdj"><img style="display: inline" src="https://img.shields.io/chrome-web-store/v/ajpkphgdonekdpifjhfffffjhikiafdj"/></a> &nbsp; <a href="https://github.com/myz-suite/parkinglot"><img style="display: inline" src="https://img.shields.io/badge/GitHub-myz--suite%2Fparkinglot-1a6de0"/></a>
   actions:
-    - text: GitHub repo
-      link: https://github.com/myz-suite/parkinglot
+    - text: Install from Chrome Web Store
+      link: https://chromewebstore.google.com/detail/ajpkphgdonekdpifjhfffffjhikiafdj
       theme: brand
     - text: Installation
       link: /en/parkinglot/install
@@ -34,8 +34,6 @@ features:
 
 **ParkingLot** is the browser-automation infrastructure of [MyZ Suite](https://github.com/myz-suite): a Chrome extension plus a local relay (Node.js) that lets an AI agent — or you — drive a real browser with simple commands.
 
-- **`parkinglot-extension`**: Chrome MV3 extension executing page commands (navigation, clicks, forms, extraction, scrolling, screenshots, search, in-page requests).
-- **`parkinglot-server`**: local relay with the `plt` CLI / HTTP — extension pairing, command routing, sessions and human approvals.
+- **`parkinglot-extension`**: Chrome MV3 extension executing page commands (navigation, clicks, forms, extraction, scrolling, screenshots, search, in-page requests). [Install from Chrome Web Store](https://chromewebstore.google.com/detail/ajpkphgdonekdpifjhfffffjhikiafdj).
+- **`parkinglot-server`**: local relay with the `plt` CLI / HTTP — `npm install -g @parkinglot/server`. Handles extension pairing, command routing, sessions and human approvals.
 - Data flows only between your machine and the sites you open.
-
-> The extension is in early developer release and not yet on the store; load it unpacked per the [installation guide](/en/parkinglot/install).

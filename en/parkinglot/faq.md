@@ -31,9 +31,9 @@ The extension acts inside your own logged-in session (e.g. X, banking). Automati
 
 No. The extension is the executor and requires a `parkinglot-server` relay that you run locally.
 
-## Is it on the store yet?
+## Is it on the store?
 
-Not yet — the extension is in early developer release; load it unpacked (see [Installation](/en/parkinglot/install)). Repo: <https://github.com/myz-suite/parkinglot>.
+Yes. The extension is live on Chrome Web Store: <https://chromewebstore.google.com/detail/ajpkphgdonekdpifjhfffffjhikiafdj>. Install the server with `npm install -g @parkinglot/server` and run `plt serve` — see [Installation](/en/parkinglot/install).
 
 ## More questions?
 

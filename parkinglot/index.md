@@ -7,10 +7,10 @@ hero:
   tagline: >
     通过本地 relay 把 <code>goto / click / extract / screenshot / search / fetch</code> 等命令
     变成真实浏览器操作 —— 带上你自己的登录态与 Cookie<br/>
-    <a href="https://github.com/myz-suite/parkinglot"><img style="display: inline" src="https://img.shields.io/badge/GitHub-myz--suite%2Fparkinglot-1a6de0"/></a>
+    <a href="https://chromewebstore.google.com/detail/ajpkphgdonekdpifjhfffffjhikiafdj"><img style="display: inline" src="https://img.shields.io/chrome-web-store/v/ajpkphgdonekdpifjhfffffjhikiafdj"/></a> &nbsp; <a href="https://github.com/myz-suite/parkinglot"><img style="display: inline" src="https://img.shields.io/badge/GitHub-myz--suite%2Fparkinglot-1a6de0"/></a>
   actions:
-    - text: GitHub 仓库
-      link: https://github.com/myz-suite/parkinglot
+    - text: Chrome 商店安装
+      link: https://chromewebstore.google.com/detail/ajpkphgdonekdpifjhfffffjhikiafdj
       theme: brand
     - text: 安装指南
       link: /parkinglot/install
@@ -34,8 +34,6 @@ features:
 
 **ParkingLot** 是 [MyZ Suite](https://github.com/myz-suite) 下的浏览器自动化基础设施：一个 Chrome 扩展 + 一个本地 relay（Node.js），让 AI Agent（或你自己）通过简单的命令行控制真实浏览器。
 
-- **`parkinglot-extension`**：Chrome MV3 扩展，在页面中执行命令（导航、点击、表单、提取、滚动、截图、搜索、页面内请求）。
-- **`parkinglot-server`**：本机 relay（`plt` CLI / HTTP），负责扩展配对、命令路由、会话与人工审批。
+- **`parkinglot-extension`**：Chrome MV3 扩展，在页面中执行命令（导航、点击、表单、提取、滚动、截图、搜索、页面内请求）。[Chrome Web Store 安装](https://chromewebstore.google.com/detail/ajpkphgdonekdpifjhfffffjhikiafdj)。
+- **`parkinglot-server`**：本机 relay（`plt` CLI / HTTP），`npm install -g @parkinglot/server` 安装。负责扩展配对、命令路由、会话与人工审批。
 - 数据只在你本机与你自己打开的站点之间流动。
-
-> 当前扩展为开发者早期版本，尚未上架商店；请按[安装指南](/parkinglot/install)以开发者模式加载。

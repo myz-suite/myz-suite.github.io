@@ -31,9 +31,9 @@
 
 不能。扩展是"执行端"，必须搭配你自己运行的本地 `parkinglot-server` 使用。
 
-## 现在能在商店安装吗？
+## 商店里可以安装吗？
 
-扩展尚在开发者早期，未上架商店；当前通过开发者模式加载（见[安装指南](/parkinglot/install)）。仓库见 <https://github.com/myz-suite/parkinglot>。
+可以。扩展已上架 Chrome Web Store：<https://chromewebstore.google.com/detail/ajpkphgdonekdpifjhfffffjhikiafdj>。server 通过 `npm install -g @parkinglot/server` 安装并 `plt serve` 启动，详见[安装指南](/parkinglot/install)。
 
 ## 更多问题？
 
