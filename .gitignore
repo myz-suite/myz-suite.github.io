@@ -5,3 +5,5 @@ node_modules/
 .vitepress/
 
 !.vitepress/theme/
+
+.DS_Store

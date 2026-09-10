@@ -3,11 +3,13 @@ layout: home
 title: ParkingLot
 hero:
   name: ParkingLot
-  text: Let an AI agent drive your real browser
+  text: Browser Automation
   tagline: >
-    Turn <code>goto / click / extract / screenshot / search / fetch</code> into real
-    browser actions through a local relay — with your own login state and cookies<br/>
-    <a href="https://chromewebstore.google.com/detail/ajpkphgdonekdpifjhfffffjhikiafdj"><img style="display: inline" src="https://img.shields.io/chrome-web-store/v/ajpkphgdonekdpifjhfffffjhikiafdj"/></a> &nbsp; <a href="https://github.com/myz-suite/parkinglot"><img style="display: inline" src="https://img.shields.io/badge/GitHub-myz--suite%2Fparkinglot-1a6de0"/></a>
+    Connect your browser to your AI agent<br/>
+    <!-- <a href="https://chromewebstore.google.com/detail/ajpkphgdonekdpifjhfffffjhikiafdj"><img style="display: inline" src="https://img.shields.io/chrome-web-store/v/ajpkphgdonekdpifjhfffffjhikiafdj"/></a> &nbsp;  --><a href="https://github.com/myz-suite/parkinglot"><img style="display: inline" src="https://img.shields.io/badge/GitHub-myz--suite%2Fparkinglot-1a6de0"/></a>
+  image:
+    src: /parkinglot.png
+    alt: ParkingLot Workflow  
   actions:
     - text: Install from Chrome Web Store
       link: https://chromewebstore.google.com/detail/ajpkphgdonekdpifjhfffffjhikiafdj

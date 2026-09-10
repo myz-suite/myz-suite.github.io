@@ -3,11 +3,13 @@ layout: home
 title: ParkingLot
 hero:
   name: ParkingLot
-  text: 让 AI Agent 控制你的真实浏览器
+  text: 浏览器自动化套件
   tagline: >
-    通过本地 relay 把 <code>goto / click / extract / screenshot / search / fetch</code> 等命令
-    变成真实浏览器操作 —— 带上你自己的登录态与 Cookie<br/>
-    <a href="https://chromewebstore.google.com/detail/ajpkphgdonekdpifjhfffffjhikiafdj"><img style="display: inline" src="https://img.shields.io/chrome-web-store/v/ajpkphgdonekdpifjhfffffjhikiafdj"/></a> &nbsp; <a href="https://github.com/myz-suite/parkinglot"><img style="display: inline" src="https://img.shields.io/badge/GitHub-myz--suite%2Fparkinglot-1a6de0"/></a>
+    链接你的 AI Agent 和 浏览器<br/>
+    <!--<a href="https://chromewebstore.google.com/detail/ajpkphgdonekdpifjhfffffjhikiafdj"><img style="display: inline" src="https://img.shields.io/chrome-web-store/v/ajpkphgdonekdpifjhfffffjhikiafdj"/></a> &nbsp; --><a href="https://github.com/myz-suite/parkinglot"><img style="display: inline" src="https://img.shields.io/badge/GitHub-myz--suite%2Fparkinglot-1a6de0"/></a>
+  image:
+    src: /parkinglot.png
+    alt: ParkingLot 工作流
   actions:
     - text: Chrome 商店安装
       link: https://chromewebstore.google.com/detail/ajpkphgdonekdpifjhfffffjhikiafdj

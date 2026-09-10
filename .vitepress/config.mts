@@ -13,11 +13,11 @@ export default defineConfig({
       label: '简体中文',
       lang: 'zh-CN',
       title: 'MyZ Suite',
-      description: 'MyZ AI 高亮智能助理与弹幕助手浏览器扩展 — 安装与使用指南',
+      description: 'MyZ 高亮助理与弹幕助手浏览器扩展 — 安装与使用指南',
       themeConfig: {
         nav: [
-          { text: 'MyZ 高亮智能助理', link: '/' },
-          { text: 'MyZ 弹幕助手', link: '/myz-danmaku' },
+          { text: 'MyZ 高亮助理', link: '/' },
+          { text: 'MyZ 弹幕助手', link: '/danmaku/' },
           { text: 'ParkingLot', link: '/parkinglot/' },
           { text: '隐私政策', link: '/privacy' },
           { text: '用户协议', link: '/tos' }
@@ -25,7 +25,7 @@ export default defineConfig({
         sidebar: {
           '/annotator/': [
             {
-            text: 'MyZ 高亮智能助理',
+            text: 'MyZ 高亮助理',
             items: [
               { text: '安装指南', link: '/annotator/install' },
               { text: '用户指南', link: '/annotator/user-guide' },
@@ -74,11 +74,11 @@ export default defineConfig({
       label: 'English',
       lang: 'en-US',
       title: 'MyZ Suite',
-      description: 'Home for MyZ AI Annotator & MyZ Danmaku Viewer browser extensions',
+      description: 'Home for MyZ Annotator & MyZ Danmaku Viewer browser extensions',
       themeConfig: {
         nav: [
-          { text: 'MyZ AI Annotator', link: '/en/' },
-          { text: 'MyZ Danmaku Viewer', link: '/en/myz-danmaku' },
+          { text: 'MyZ Annotator', link: '/en/' },
+          { text: 'MyZ Danmaku Viewer', link: '/en/danmaku/' },
           { text: 'ParkingLot', link: '/en/parkinglot/' },
           { text: 'Privacy Policy', link: '/en/privacy' },
           { text: 'Terms of Service', link: '/en/tos' }
@@ -86,7 +86,7 @@ export default defineConfig({
         sidebar: {
           '/en/annotator/': [
             {
-            text: 'MyZ AI Annotator',
+            text: 'MyZ Annotator',
             items: [
               { text: 'Installation', link: '/en/annotator/install' },
               { text: 'User Guide', link: '/en/annotator/user-guide' },

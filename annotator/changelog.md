@@ -6,11 +6,41 @@
 - [![](https://img.shields.io/chrome-web-store/v/mhakfcbobhdemicjelhjjpmgibhnnplg)](https://chromewebstore.google.com/detail/mhakfcbobhdemicjelhjjpmgibhnnplg) 
 - [![](https://img.shields.io/badge/dynamic/json?label=edge%20add-on&prefix=v&query=$.version&url=https://microsoftedge.microsoft.com/addons/getproductdetailsbycrxid/fepakkoggnancnpcclldodfbpgobkabj)](https://microsoftedge.microsoft.com/addons/detail/fepakkoggnancnpcclldodfbpgobkabj)
 
+## v0.6.0 — 移除 AI 能力与 Dashboard 收敛
+
+- 移除 AI 智能助理（SidePanel）及其全部相关能力：自定义 Provider、MCP Server、本地 tools、Agent Skills、向量检索（Vectoria）、自动高亮、Superpower 多 Agent 协作与 Dashboard 聊天页面。
+- 移除社区导入（X / Mastodon）；导入统一为文件导入（MyZ JSON、RainDrop CSV、Weava CSV、Chrome 书签 HTML）。
+- 精简扩展权限与右键菜单：移除 sidePanel 权限，右键菜单仅保留禅定模式（Zen Mode）相关项。
+- Dashboard 收敛为高亮管理与设置：高亮列表、高亮查看器，以及设置（高亮偏好 / 外观 / 导入 / 同步）。
+
+## v0.5.0 — Dashboard UI 重构与交互优化
+
+- ThemeToggle 下拉按 effective theme 显示状态，修复 Dashboard 中下拉被面板遮挡的问题。
+- 高亮卡片的类型标识与操作按钮统一改为 lucide 图标，支持 hover tooltip。
+- 标签区紧凑化排列；卡片视图改为 CSS columns 瀑布流布局；摘要内容应用 prose 排版。
+- Card 内批注改为上下结构，适配瀑布流卡片高度。
+- 内容浮动工具条新增搜索按钮：调用浏览器搜索打开新页面搜索选中内容。
+
+## v0.4.4 — Provider Tiering 与 Mistral SDK 接入
+
+- 新增 mistral provider 类型，接入官方 SDK 用于模型列表、连接测试、对话、streaming 与 tool calling。
+- OpenAI 兼容接口按供应商 profile 进行 request patching，收敛 Tier 1 兼容支持列表。
+
+## v0.4.3 — OpenAI-compatible reasoning 续传修复
+
+- 修复第三方 OpenAI-compatible 接口在 thinking mode 下的多轮对话失败问题。
+- 传输层切换到官方 SDK（openai / anthropic / genai），收缩 provider 类型范围。
+
+## v0.4.2 — Dashboard 新查看器与页面聚合
+
+- 新增 `/highlights/:id` 查看器页面，支持同页标注连续阅读、滚动到底自动切换、上一页/下一页导航。
+- Dashboard 高亮列表新增可折叠页面侧边栏，支持按网页筛选与按时间/Range 顺序查看。
+- 标注内容新增 `contentType` 字段，支持 Markdown/HTML/纯文本渲染。
+
 ## v0.4.1 — Dashboard 体验升级
 
 - Dashboard 结构升级，更清晰易用。
 - 设置页面新增侧边导航，快速跳转到不同设置区域。
-- 新增 Dashboard 内的聊天页面，便于集中管理对话。
 - 导入能力增强：支持 RainDrop CSV 和 Chrome 书签 HTML。
 
 ## v0.4.0 — Superpower 模式与多 Agent 协作

@@ -2,6 +2,58 @@
 
 Highlights from recent extension updates.
 
+## v0.6.0 — AI features removed & Dashboard consolidated
+
+- Removed the AI Assistant (Side Panel) and all related capabilities: custom Providers, MCP servers, local tools, Agent Skills, vector search (Vectoria), auto highlight, Superpower multi-agent collaboration, and the Dashboard chat page.
+- Removed social import (X / Mastodon); imports are now file-based (MyZ JSON, RainDrop CSV, Weava CSV, Chrome bookmarks HTML).
+- Slimmed down extension permissions and the right-click menu: removed the `sidePanel` permission; only Zen Mode items remain.
+- Consolidated the Dashboard into highlight management and settings: highlight list, highlight viewer, and settings (highlight preferences / appearance / import / sync).
+
+## v0.5.0 — Dashboard UI refactor & interaction polish
+
+- The ThemeToggle dropdown now reflects the effective theme and no longer gets clipped by panels.
+- Highlight card type icons and action buttons use lucide icons with hover tooltips.
+- Compact tag layout; card view switched to a CSS-columns masonry flow; summary content uses prose typography.
+- Card notes are stacked vertically to fit masonry card heights.
+- Added a search button to the content floating toolbar: opens a new page to search the selected text via the browser.
+
+## v0.4.4 — Provider tiering & Mistral SDK
+
+- Added a `mistral` provider type using the official SDK for model listing, connection tests, chat, streaming, and tool calling.
+- OpenAI-compatible requests are patched per provider profile; Tier 1 compatibility is limited to a curated list.
+
+## v0.4.3 — OpenAI-compatible reasoning replay fix
+
+- Fixed multi-turn chat failures with third-party OpenAI-compatible endpoints in thinking mode.
+- Moved transports to official SDKs (openai / anthropic / genai) and narrowed the provider type set.
+
+## v0.4.2 — New Dashboard viewer & page aggregation
+
+- Added the `/highlights/:id` viewer with continuous same-page reading, scroll-to-end auto-advance, and previous/next navigation.
+- Added a collapsible page sidebar to the Dashboard highlight list, with filtering by page and ordering by time/Range.
+- Added a `contentType` field so annotations render as Markdown/HTML/plain text.
+
+## v0.4.1 — Dashboard experience upgrade
+
+- Restructured the Dashboard for clarity.
+- Added a sidebar to the settings page for quick navigation between sections.
+- Enhanced imports: support for RainDrop CSV and Chrome bookmarks HTML.
+
+## v0.4.0 — Superpower mode & multi-agent collaboration
+
+- Introduced Superpower mode with multi-agent collaboration flows.
+- Cleaner, denser conversation sidebar.
+- Improved conversation titles and history list.
+- Fixed the palette color editor not opening.
+
+## v0.3.2 — Auto highlight & categorized annotations
+
+- Added auto highlight that generates key-content annotations automatically.
+- “Discover key points” became a standalone entry point.
+- AI settings gained auto-highlight model and category style configuration.
+- Added a “one-click auto highlight” button to the popup empty state.
+- More robust highlight matching with fewer errors and overlaps.
+
 ## v0.3.1 — UX & settings stability
 
 - Fixed the Inspector not appearing after clicking a highlight, and redesigned it as a toolbar-style popover (notes show above; edit closes the panel).
