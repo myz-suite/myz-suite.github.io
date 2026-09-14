@@ -1,9 +1,15 @@
 # 常见问题
 
+::: warning 版本尚未 Stable
+ParkingLot 仍在快速演进，线协议与命令**可能存在破坏性变更**。请谨慎用于生产环境，升级前先查看仓库的变更说明。
+:::
+
 ## 扩展提示 EXTENSION_OFFLINE / 连不上
 
-- 打开扩展 popup，确认显示 **Connected ✓**；若不是，重新填入 server URL 与 token。
+- 看扩展工具栏图标角标：**绿**=已连接、**红**=断开（server 未运行或掉线）、**橙**=未配置或 token 错误。红色/橙色时打开 popup 按提示处理，点 **Retry** 重试。
+- token 错误（橙色）：重新复制 `plt serve` 输出的 pair token 填入。
 - 确认 server 正在运行（`plt status` 可访问 `http://127.0.0.1:8787`）。
+- 偶发 `EXTENSION_OFFLINE`：浏览器回收扩展后台后会自动重连，稍等重试即可；若持续失败请按上面的角标状态排查。
 - 每次 `pnpm build` 改动扩展代码后，需在 `chrome://extensions` 点 ParkingLot 的**刷新**按钮重新加载。
 
 ## 命令报错 "Cannot access a chrome:// URL" / 无响应
@@ -16,7 +22,7 @@
 
 ## session 报错 "No tab with id" / SESSION_NOT_FOUND
 
-会话指向的标签页可能已被关闭：`plt session list` 查看，`plt session close <id>` 后重新 `plt goto`。
+会话指向的标签页可能已被关闭。此时 server 会清除该绑定，下一条命令自动回退到**最近激活的标签页**；也可 `plt session list` 查看、`plt session close <id>` 后重新 `plt goto`。
 
 ## search 返回为空或想翻页
 

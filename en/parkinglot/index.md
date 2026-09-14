@@ -6,7 +6,7 @@ hero:
   text: Browser Automation
   tagline: >
     Connect your browser to your AI agent<br/>
-    <!-- <a href="https://chromewebstore.google.com/detail/ajpkphgdonekdpifjhfffffjhikiafdj"><img style="display: inline" src="https://img.shields.io/chrome-web-store/v/ajpkphgdonekdpifjhfffffjhikiafdj"/></a> &nbsp;  --><a href="https://github.com/myz-suite/parkinglot"><img style="display: inline" src="https://img.shields.io/badge/GitHub-myz--suite%2Fparkinglot-1a6de0"/></a>
+    <a href="https://chromewebstore.google.com/detail/ajpkphgdonekdpifjhfffffjhikiafdj"><img style="display: inline" src="https://img.shields.io/chrome-web-store/v/ajpkphgdonekdpifjhfffffjhikiafdj"/></a> &nbsp; <a href="https://www.npmjs.com/package/@parkinglot/server"><img style="display: inline" src="https://img.shields.io/npm/v/%40parkinglot%2Fserver?label=%40parkinglot%2Fserver"/></a>
   image:
     src: /parkinglot.png
     alt: ParkingLot Workflow  
@@ -26,13 +26,17 @@ features:
   - title: Continuity & auditability
     icon: 🧭
     details: session / tab / navId plus a context snapshot on every response lets the agent verify page state; a local JSONL command ledger redacts secrets.
-  - title: Human in the loop
-    icon: 🛡️
-    details: Sessions can run in ask mode so write operations need popup approval; the relay binds 127.0.0.1 with token pairing and eval is off by default.
+  - title: Visible status, stable connection
+    icon: 🟢
+    details: A toolbar badge (green/red/orange) shows the connection state with popup guidance and Retry; connections auto-reconnect and the server shuts down gracefully on Ctrl-C.
   - title: Local first
     icon: 💻
     details: The extension only connects to a relay you run yourself — no remote service, no telemetry.
 ---
+
+::: warning Not yet stable
+ParkingLot is still evolving — the wire protocol and commands **may change in breaking ways**. Use it with caution in production, and review the repository changelog before upgrading.
+:::
 
 **ParkingLot** is the browser-automation infrastructure of [MyZ Suite](https://github.com/myz-suite): a Chrome extension plus a local relay (Node.js) that lets an AI agent — or you — drive a real browser with simple commands.
 

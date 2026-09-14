@@ -1,9 +1,15 @@
 # FAQ
 
+::: warning Not yet stable
+ParkingLot is still evolving — the wire protocol and commands **may change in breaking ways**. Use it with caution in production, and review the repository changelog before upgrading.
+:::
+
 ## EXTENSION_OFFLINE / cannot connect
 
-- Open the extension popup and confirm **Connected ✓**; otherwise re-enter the server URL and token.
+- Check the toolbar badge: **green** = connected, **red** = disconnected (server not running / dropped), **orange** = not configured or bad token. On red/orange, open the popup and follow its guidance, then click **Retry**.
+- Bad token (orange): re-copy the pair token printed by `plt serve`.
 - Make sure the server is running (`plt status` against `http://127.0.0.1:8787`).
+- Occasional `EXTENSION_OFFLINE`: the extension reconnects automatically after Chrome reclaims its background worker; retry shortly. If it keeps failing, check the badge state above.
 - After every `pnpm build` that changes the extension, click the **refresh** button on ParkingLot in `chrome://extensions`.
 
 ## "Cannot access a chrome:// URL" / no response
@@ -16,7 +22,7 @@ Run `plt extract` to see the actual page content, then use a more specific CSS s
 
 ## "No tab with id" / SESSION_NOT_FOUND
 
-The session's tab was likely closed: `plt session list`, `plt session close <id>`, then `plt goto` again.
+The session's tab was likely closed. The server then clears the binding and the next command falls back to the **most recently active tab**; you can also `plt session list`, `plt session close <id>`, then `plt goto` again.
 
 ## Empty search results / paging
 

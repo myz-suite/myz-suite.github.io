@@ -1,5 +1,9 @@
 # 安装指南
 
+::: warning 版本尚未 Stable
+ParkingLot 仍在快速演进，线协议与命令**可能存在破坏性变更**。请谨慎用于生产环境，升级前先查看仓库的变更说明。
+:::
+
 ParkingLot 由 **parkinglot-server**（relay）与 **parkinglot-extension**（Chrome 扩展）组成。安装分三步：装 server → 装扩展 → 配对。
 
 ## 前置条件

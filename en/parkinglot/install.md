@@ -1,5 +1,9 @@
 # Installation
 
+::: warning Not yet stable
+ParkingLot is still evolving — the wire protocol and commands **may change in breaking ways**. Use it with caution in production, and review the repository changelog before upgrading.
+:::
+
 ParkingLot has two parts: **parkinglot-server** (the relay) and **parkinglot-extension** (the Chrome extension). Install the server, install the extension, then pair them.
 
 ## Prerequisites
