@@ -88,7 +88,33 @@ The sync secret cannot be recovered. If you forget the password, new clients can
 The E2EE implementation is open for review at <https://github.com/myz-suite/sync/>.
 :::
 
-## 5. Zen Mode
+## 5. PDF reading and annotation
+
+**Open a PDF**
+
+- In the popup, click the PDF icon: if the current tab is a web PDF it opens directly in the reader; otherwise you land on the reader home and can choose `打开本地 PDF` (Open local PDF).
+- Right-click any PDF link on a page and choose `在 MyZ 中打开 PDF` (Open PDF in MyZ).
+- Local PDFs are opened via the file picker (Chrome only, using the File System Access API).
+
+**Reading**
+
+- Continuous scrolling by default, zoom (50%–300%), and automatic reading-progress memory (reopens at your last position).
+- Supports scanned/image PDFs including JPEG2000 / JBIG2.
+
+**Annotation**
+
+- Select PDF text with the mouse → a floating toolbar appears: `高亮` (Highlight) / `保存文字` (Save text) / `取消` (Cancel).
+- The inspector on the right edits style (marker / underline / wavy), color, note and tags; click `保存` (Save) to write (blur also auto-saves).
+- New annotations reuse the last used style and color.
+
+**Restore & jump back**
+
+- Reopening the same PDF restores highlights automatically: web PDFs match by URL, local PDFs by file fingerprint (open the same file on another device to restore).
+- Dashboard cards / list / viewer show a “第 N 页” (page N) badge; click `在阅读器中打开` (Open in reader) to jump to that page.
+
+> Note: local PDF support is currently Chrome-only.
+
+## 6. Zen Mode
 
 On pages with a detectable article body, you can use the right-click menu:
 
@@ -97,7 +123,7 @@ On pages with a detectable article body, you can use the right-click menu:
 
 If you don’t see the menu, the extension couldn’t detect a suitable article container on that page.
 
-## 6. Troubleshooting
+## 7. Troubleshooting
 
 - **Highlight cannot be located?** Page structure changes may temporarily prevent restoration; downgrade the entry to plain text from the Popup or Dashboard so its content isn’t lost.
 - **Overlapping highlight?** The extension warns you and refuses to create the annotation to avoid nesting, which would break positioning.

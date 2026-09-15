@@ -6,6 +6,16 @@
 - [![](https://img.shields.io/chrome-web-store/v/mhakfcbobhdemicjelhjjpmgibhnnplg)](https://chromewebstore.google.com/detail/mhakfcbobhdemicjelhjjpmgibhnnplg) 
 - [![](https://img.shields.io/badge/dynamic/json?label=edge%20add-on&prefix=v&query=$.version&url=https://microsoftedge.microsoft.com/addons/getproductdetailsbycrxid/fepakkoggnancnpcclldodfbpgobkabj)](https://microsoftedge.microsoft.com/addons/detail/fepakkoggnancnpcclldodfbpgobkabj)
 
+## v0.6.1 — PDF 阅读与标注
+
+- 新增内置 PDF 阅读器：显式打开本地文件或网页 PDF，默认连续滚动、缩放（50%–300%）与阅读进度记忆。
+- 支持在 PDF 中选中文本进行高亮 / 保存文字、添加批注与标签；重开同一 PDF 自动还原高亮（本地按文件指纹、网页按 URL）。
+- 支持 JPEG2000 / JBIG2 图片型 PDF。
+- 入口：Popup 的 PDF 按钮、右键链接「在 MyZ 中打开 PDF」；网页 PDF 无 `.pdf` 后缀（如 arXiv）也可识别。
+- Dashboard 显示「第 N 页」徽标，并可一键跳回阅读器对应页。
+- 新建标注沿用上次使用的高亮样式与颜色；Inspector 提供显式保存按钮与状态提示。
+- 说明：本地 PDF 目前仅支持 Chrome。
+
 ## v0.6.0 — 移除 AI 能力与 Dashboard 收敛
 
 - 移除 AI 智能助理（SidePanel）及其全部相关能力：自定义 Provider、MCP Server、本地 tools、Agent Skills、向量检索（Vectoria）、自动高亮、Superpower 多 Agent 协作与 Dashboard 聊天页面。

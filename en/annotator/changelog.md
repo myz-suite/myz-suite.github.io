@@ -2,6 +2,16 @@
 
 Highlights from recent extension updates.
 
+## v0.6.1 — PDF reading & annotation
+
+- Added a built-in PDF reader: open local files or web PDFs, with continuous scrolling, zoom (50%–300%) and reading-progress memory.
+- Select PDF text to highlight / save text and add notes and tags; reopening the same PDF restores highlights (local by file fingerprint, web by URL).
+- Supports JPEG2000 / JBIG2 image-based PDFs.
+- Entry points: the popup PDF button and the right-click `在 MyZ 中打开 PDF` link action; web PDFs without a `.pdf` suffix (e.g. arXiv) are detected too.
+- Dashboard shows a “page N” badge and can jump back to the corresponding reader page.
+- New annotations reuse the last used highlight style and color; the inspector now has an explicit Save button and status.
+- Note: local PDF support is currently Chrome-only.
+
 ## v0.6.0 — AI features removed & Dashboard consolidated
 
 - Removed the AI Assistant (Side Panel) and all related capabilities: custom Providers, MCP servers, local tools, Agent Skills, vector search (Vectoria), auto highlight, Superpower multi-agent collaboration, and the Dashboard chat page.

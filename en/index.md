@@ -34,6 +34,9 @@ features:
   - title: End-to-end encrypted sync
     icon: 📌
     details: Bring your own S3-compatible storage; the sync secret never leaves your device.
+  - title: PDF reading & annotation
+    icon: 📄
+    details: Built-in PDF reader with continuous scrolling, zoom, excerpts and notes; highlights restore on reopen.
 ---
 
 Welcome to MyZ Annotator. Use the buttons above to install the extension from the browser store or open the documentation for installation tips and release notes.
