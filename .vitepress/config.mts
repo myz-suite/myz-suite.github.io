@@ -52,8 +52,6 @@ export default defineConfig({
             items: [
               { text: '概览', link: '/parkinglot/' },
               { text: '安装指南', link: '/parkinglot/install' },
-              { text: '使用指南', link: '/parkinglot/guide' },
-              { text: '常见问题', link: '/parkinglot/faq' },
               { text: '隐私政策', link: '/privacy' },
               { text: '用户协议', link: '/tos' }
             ]
@@ -113,8 +111,6 @@ export default defineConfig({
             items: [
               { text: 'Overview', link: '/en/parkinglot/' },
               { text: 'Installation', link: '/en/parkinglot/install' },
-              { text: 'Guide', link: '/en/parkinglot/guide' },
-              { text: 'FAQ', link: '/en/parkinglot/faq' },
               { text: 'Privacy Policy', link: '/en/privacy' },
               { text: 'Terms of Service', link: '/en/tos' }
             ]

@@ -16,16 +16,13 @@ hero:
       theme: brand
     - text: Installation
       link: /en/parkinglot/install
-    - text: Guide
-      theme: alt
-      link: /en/parkinglot/guide
 features:
   - title: Real login state
     icon: 🔐
     details: Commands run inside your Chrome session — cookies, logins and anti-bot realism included; in-page fetch reaches authenticated APIs.
   - title: Continuity & auditability
     icon: 🧭
-    details: session / tab / navId plus a context snapshot on every response lets the agent verify page state; a local JSONL command ledger redacts secrets.
+    details: tab / navId plus a context snapshot on every response lets the agent verify page state; commands target the current tab by default (override with --tab). A local JSONL command ledger redacts secrets.
   - title: Visible status, stable connection
     icon: 🟢
     details: A toolbar badge (green/red/orange) shows the connection state with popup guidance and Retry; connections auto-reconnect and the server shuts down gracefully on Ctrl-C.
@@ -41,5 +38,5 @@ ParkingLot is still evolving — the wire protocol and commands **may change in 
 **ParkingLot** is the browser-automation infrastructure of [MyZ Suite](https://github.com/myz-suite): a Chrome extension plus a local relay (Node.js) that lets an AI agent — or you — drive a real browser with simple commands.
 
 - **`parkinglot-extension`**: Chrome MV3 extension executing page commands (navigation, clicks, forms, extraction, scrolling, screenshots, search, in-page requests). [Install from Chrome Web Store](https://chromewebstore.google.com/detail/ajpkphgdonekdpifjhfffffjhikiafdj).
-- **`parkinglot-server`**: local relay with the `plt` CLI / HTTP — `npm install -g @parkinglot/server`. Handles extension pairing, command routing, sessions and human approvals.
+- **`parkinglot-server`**: local relay with the `plt` CLI / HTTP — `npm install -g @parkinglot/server`. Handles extension pairing, command routing, the current tab and the event cache.
 - Data flows only between your machine and the sites you open.

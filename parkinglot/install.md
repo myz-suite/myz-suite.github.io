@@ -57,10 +57,10 @@ plt status
 
 ## （可选）Agent 用户：安装 parkinglot skill
 
-若你要让 AI Agent 通过 `pl`-类 CLI 控制浏览器，可在目标环境中安装配套 skill：
+若你要让 AI Agent 通过 `plt` CLI 控制浏览器，可在目标环境中安装配套 skill：
 
 ```bash
 npx skills add myz-suite/parkinglot --skill parkinglot
 ```
 
-skill 会提供命令参考、session 连续性心智模型与标准工作流（详见[使用指南](/parkinglot/guide)）。
+skill 会提供命令参考与标准工作流；完整命令与协议参考见仓库的 `skills/parkinglot/references/protocol.md`。

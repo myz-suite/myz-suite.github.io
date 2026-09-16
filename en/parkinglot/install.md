@@ -63,4 +63,4 @@ To let an AI agent drive the browser through this stack, install the companion s
 npx skills add myz-suite/parkinglot --skill parkinglot
 ```
 
-The skill provides the command reference, the session/tab/navId continuity model and standard workflows (see the [guide](/en/parkinglot/guide)).
+The skill provides the command reference and standard workflows; see the repository's `skills/parkinglot/references/protocol.md` for the full command and protocol reference.
