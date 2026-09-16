@@ -6,6 +6,14 @@
 - [![](https://img.shields.io/chrome-web-store/v/mhakfcbobhdemicjelhjjpmgibhnnplg)](https://chromewebstore.google.com/detail/mhakfcbobhdemicjelhjjpmgibhnnplg) 
 - [![](https://img.shields.io/badge/dynamic/json?label=edge%20add-on&prefix=v&query=$.version&url=https://microsoftedge.microsoft.com/addons/getproductdetailsbycrxid/fepakkoggnancnpcclldodfbpgobkabj)](https://microsoftedge.microsoft.com/addons/detail/fepakkoggnancnpcclldodfbpgobkabj)
 
+## v0.6.3 — PDF 阅读器导航侧栏与选择修复
+
+- PDF 阅读器新增左侧导航侧栏：可按 PDF 目录（书签）跳转章节，或按页查看标注并精确定位到标注位置；侧栏开关与标签页会记忆。
+- 标注列表支持关键词搜索，可按选中文本 / 批注 / 标签过滤，也可按类型（高亮 / 保存文字）筛选。
+- 修复下划线 / 波浪线会覆盖选中文字前后内容的问题。
+- 修复长段落选中或高亮时，范围在文字右侧多出一截空白的问题。
+- 修复从 Dashboard 跳转到阅读器打开本地 PDF 时的授权失败问题，并在必要时提供「重新授权并打开」。
+
 ## v0.6.1 — PDF 阅读与标注
 
 - 新增内置 PDF 阅读器：显式打开本地文件或网页 PDF，默认连续滚动、缩放（50%–300%）与阅读进度记忆。

@@ -2,6 +2,14 @@
 
 Highlights from recent extension updates.
 
+## v0.6.3 — PDF reader sidebar & selection fixes
+
+- New sidebar in the PDF reader: navigate by table of contents (bookmarks), or browse highlights by page and jump precisely to an annotation; the sidebar state and active tab are remembered.
+- Search your highlights by text, note or tag, and filter by kind (highlight / saved text).
+- Fixed underline / wavy decorations covering text before and after the selection.
+- Fixed selection and highlights spilling into the right margin on long paragraphs.
+- Fixed opening a local PDF from the Dashboard failing with a `requestPermission` error; added a “Re-authorize and open” retry when needed.
+
 ## v0.6.1 — PDF reading & annotation
 
 - Added a built-in PDF reader: open local files or web PDFs, with continuous scrolling, zoom (50%–300%) and reading-progress memory.

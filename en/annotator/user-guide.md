@@ -101,6 +101,12 @@ The E2EE implementation is open for review at <https://github.com/myz-suite/sync
 - Continuous scrolling by default, zoom (50%–300%), and automatic reading-progress memory (reopens at your last position).
 - Supports scanned/image PDFs including JPEG2000 / JBIG2.
 
+**Navigation & search**
+
+- Click the sidebar button on the left of the toolbar to open the navigation sidebar (its open state and active tab are remembered):
+  - Table of contents: reads the PDF outline (bookmarks); click an entry to jump to that section, and the current section is highlighted.
+  - Highlights: lists annotations grouped by page; click one to jump precisely to it and select it. Use the search box to filter by text / note / tag, or the kind buttons (all / highlight / saved text).
+
 **Annotation**
 
 - Select PDF text with the mouse → a floating toolbar appears: `高亮` (Highlight) / `保存文字` (Save text) / `取消` (Cancel).
