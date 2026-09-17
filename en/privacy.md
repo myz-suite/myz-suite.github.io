@@ -1,6 +1,6 @@
 # MyZ Annotator & MyZ Danmaku Viewer Privacy Policy
 
-**Effective date:** 2026-01-12
+**Effective date:** 2026-09-17
 
 MyZ Annotator helps you highlight, annotate, and capture screenshots in your browser, and manage everything locally. MyZ Danmaku Viewer fetches timestamped YouTube comments and renders an on-device floating danmaku layer. ParkingLot is a browser-automation bridge whose extension connects only to a relay you run yourself on `127.0.0.1`, letting an AI agent (or you) drive real browser actions by command. This policy explains what data these extensions access, how it is used, and the choices you have.
 
@@ -26,6 +26,14 @@ If you enable encrypted sync:
 - Parsed danmaku results and related metadata remain inside your browser for offline reuse. They are not uploaded or synced anywhere.
 - We do not collect your viewing history or account information. Danmaku parsing runs entirely on your device.
 - Calling YouTube’s private interface relies on an unofficial channel. Google may rate-limit or block accounts or IPs that issue these requests frequently. If that happens, you are responsible for any access restrictions or playback issues that arise. We cannot compensate or mediate with Google.
+
+## Promotional Content
+
+To support the ongoing development of this suite, extensions in the MyZ suite may display promotional content related to this software, without affecting core functionality (for example, recommending another MyZ extension or asking you to rate this one). Specifically:
+
+- **MyZ Danmaku Viewer** may show one clickable promotional message in the danmaku layer the first time you play a given video. It is shown only once per video, and never again for videos that are already cached or have already shown it.
+- Such content relates only to this software suite. It contains **no third-party advertising** and involves no upload, sharing, or analysis of your data.
+- You can turn promotional content off in the extension settings, or remove it by uninstalling the extension. We do not collect or report any personal information when you interact with promotional content.
 
 ## End-to-End Encrypted Sync (E2EE)
 
@@ -58,6 +66,7 @@ All logic ships with the extension package. The extension never loads or execute
 
 - Remove highlights, notes, or screenshots at any time via the dashboard UI.
 - Disable optional network features such as encrypted sync whenever you want.
+- Turn promotional content off in the extension settings at any time.
 - Uninstall the extension to delete all stored data automatically.
 
 ## Changes to This Policy

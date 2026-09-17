@@ -1,6 +1,6 @@
 # Terms of Service
 
-**Effective date:** 2026-01-12
+**Effective date:** 2026-09-17
 
 These Terms of Service govern how you may use the MyZ Annotator, MyZ Danmaku Viewer and ParkingLot browser extensions. Installing or using either extension means you accept these terms.
 
@@ -22,6 +22,9 @@ These features are entirely optional and under your control. You are responsible
 - Do not send sensitive or private data to third-party servers unless you fully understand and accept their data-handling practices.
 - We do not provide any remote service and are not responsible for any loss, leakage, charges, disputes, or liabilities caused by your use of third-party servers.
 - The storage provider used for encrypted sync is chosen by you. Any outages, data loss, billing disputes, or compliance issues must be resolved between you and the storage provider; we are not responsible.
+
+## Promotional Content
+Extensions in this suite may display promotional content related to this software suite (for example, recommending another MyZ extension or asking you to rate this one) without affecting core functionality. Such content contains **no third-party advertising**, can be disabled in the extension settings, and involves no upload or sharing of your data. Continued use indicates that you are aware of and accept this behavior.
 
 ## End-to-End Encrypted Sync
 All synced data is end-to-end encrypted (E2EE) and never exposes plaintext to the storage platform. If you forget the sync password, new clients cannot decrypt old data and you must re-encrypt and re-sync. The encryption sync implementation is publicly auditable at <https://github.com/myz-suite/sync/>.
