@@ -2,7 +2,7 @@
 
 **Effective date:** 2026-09-17
 
-MyZ Annotator helps you highlight, annotate, and capture screenshots in your browser, and manage everything locally. MyZ Danmaku Viewer fetches timestamped YouTube comments and renders an on-device floating danmaku layer. ParkingLot is a browser-automation bridge whose extension connects only to a relay you run yourself on `127.0.0.1`, letting an AI agent (or you) drive real browser actions by command. This policy explains what data these extensions access, how it is used, and the choices you have.
+MyZ Annotator helps you highlight, annotate, and capture screenshots in your browser, and manage everything locally. MyZ Danmaku Viewer fetches timestamped YouTube comments and renders an on-device floating danmaku layer. Parklet is a browser-automation bridge whose extension connects only to a relay you run yourself on `127.0.0.1`, letting an AI agent (or you) drive real browser actions by command. This policy explains what data these extensions access, how it is used, and the choices you have.
 
 ## Data We Store Locally
 
@@ -39,12 +39,12 @@ To support the ongoing development of this suite, extensions in the MyZ suite ma
 
 All synced data is end-to-end encrypted (E2EE) and never exposes plaintext to the storage platform. If you forget the password, new clients cannot decrypt old data and you must re-encrypt and re-sync. The encryption sync implementation is publicly auditable at <https://github.com/myz-suite/sync/>.
 
-## ParkingLot (agent browser bridge)
+## Parklet (agent browser bridge)
 
-ParkingLot pairs a Chrome extension (executor) with a `parkinglot-server` relay that you run locally. It is designed local-first; every page action is executed by the extension inside your own browser session:
+Parklet pairs a Chrome extension (executor) with a `parklet-server` relay that you run locally. It is designed local-first; every page action is executed by the extension inside your own browser session:
 
 - **Network**: the extension's WebSocket connects only to your relay (default `ws://127.0.0.1:8787`) after token pairing. We operate no remote service that receives, forwards, or stores commands or page data.
-- **Where data lives**: the pairing token and server URL are kept in the extension's local storage; a JSONL command ledger is written by the relay into your local state dir (default `~/.parkinglot/`), with passwords, tokens and request bodies redacted.
+- **Where data lives**: the pairing token and server URL are kept in the extension's local storage; a JSONL command ledger is written by the relay into your local state dir (default `~/.parklet/`), with passwords, tokens and request bodies redacted.
 - **Scope**: commands drive the browser to pages you specify (including sites you are logged into). The extension adds no tracking and sends no telemetry.
 - **Optional capability**: `eval` (arbitrary in-page JS) is disabled by default and requires an explicit opt-in on your own server. Using `search`, `fetch`, or automating logged-in sites means accepting those sites' terms and risk controls.
 - **Your call**: automating third-party sites may trigger their risk controls (CAPTCHA, rate limits, bans). What you automate, where, and how often is your decision and your responsibility.
@@ -56,7 +56,7 @@ ParkingLot pairs a Chrome extension (executor) with a `parkinglot-server` relay 
 - YouTube page access: Lets MyZ Danmaku read public comments for the active video so it can produce danmaku locally.
 - `storage`: Required to keep your highlights, danmaku caches, and settings on-device.
 - `scripting`: Used by MyZ Danmaku to add the overlay UI and styles on the page.
-- ParkingLot permissions: `tabs` (list/switch tabs), `scripting` (inject the page command executor), `webNavigation` (track navigation for the navId continuity), `storage` (local server URL + pairing token), `alarms` (service-worker keep-alive), plus `host_permissions <all_urls>` to run commands on whichever page you point it at.
+- Parklet permissions: `tabs` (list/switch tabs), `scripting` (inject the page command executor), `webNavigation` (track navigation for the navId continuity), `storage` (local server URL + pairing token), `alarms` (service-worker keep-alive), plus `host_permissions <all_urls>` to run commands on whichever page you point it at.
 
 ## No Remote Code Execution
 

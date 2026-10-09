@@ -18,7 +18,7 @@ export default defineConfig({
         nav: [
           { text: 'MyZ 高亮助理', link: '/' },
           { text: 'MyZ 弹幕助手', link: '/danmaku/' },
-          { text: 'ParkingLot', link: '/parkinglot/' },
+          { text: 'Parklet', link: '/parklet/' },
           { text: '隐私政策', link: '/privacy' },
           { text: '用户协议', link: '/tos' }
         ],
@@ -46,12 +46,12 @@ export default defineConfig({
             ]
           }
           ],
-          "/parkinglot/": [
+          "/parklet/": [
             {
-            text: 'ParkingLot',
+            text: 'Parklet',
             items: [
-              { text: '概览', link: '/parkinglot/' },
-              { text: '安装指南', link: '/parkinglot/install' },
+              { text: '概览', link: '/parklet/' },
+              { text: '安装指南', link: '/parklet/install' },
               { text: '隐私政策', link: '/privacy' },
               { text: '用户协议', link: '/tos' }
             ]
@@ -77,7 +77,7 @@ export default defineConfig({
         nav: [
           { text: 'MyZ Annotator', link: '/en/' },
           { text: 'MyZ Danmaku Viewer', link: '/en/danmaku/' },
-          { text: 'ParkingLot', link: '/en/parkinglot/' },
+          { text: 'Parklet', link: '/en/parklet/' },
           { text: 'Privacy Policy', link: '/en/privacy' },
           { text: 'Terms of Service', link: '/en/tos' }
         ],
@@ -105,12 +105,12 @@ export default defineConfig({
             ]
           }
           ],
-          "/en/parkinglot/": [
+          "/en/parklet/": [
             {
-            text: 'ParkingLot',
+            text: 'Parklet',
             items: [
-              { text: 'Overview', link: '/en/parkinglot/' },
-              { text: 'Installation', link: '/en/parkinglot/install' },
+              { text: 'Overview', link: '/en/parklet/' },
+              { text: 'Installation', link: '/en/parklet/install' },
               { text: 'Privacy Policy', link: '/en/privacy' },
               { text: 'Terms of Service', link: '/en/tos' }
             ]

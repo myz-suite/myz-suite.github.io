@@ -2,7 +2,7 @@
 
 **Effective date:** 2026-09-17
 
-These Terms of Service govern how you may use the MyZ Annotator, MyZ Danmaku Viewer and ParkingLot browser extensions. Installing or using either extension means you accept these terms.
+These Terms of Service govern how you may use the MyZ Annotator, MyZ Danmaku Viewer and Parklet browser extensions. Installing or using either extension means you accept these terms.
 
 ## Eligibility
 You must have the legal capacity to enter into a binding agreement in your jurisdiction. If you use the extension on behalf of an organization, you confirm that you are authorized to bind that organization to these terms.
@@ -29,11 +29,11 @@ Extensions in this suite may display promotional content related to this softwar
 ## End-to-End Encrypted Sync
 All synced data is end-to-end encrypted (E2EE) and never exposes plaintext to the storage platform. If you forget the sync password, new clients cannot decrypt old data and you must re-encrypt and re-sync. The encryption sync implementation is publicly auditable at <https://github.com/myz-suite/sync/>.
 
-## ParkingLot Terms
+## Parklet Terms
 
-**ParkingLot** automates actions inside your own browser session:
+**Parklet** automates actions inside your own browser session:
 
-- **Local operation**: you must build and run the companion `parkinglot-server` relay yourself and are responsible for protecting its pairing token and local state directory. We provide no remote or hosted service.
+- **Local operation**: you must build and run the companion `parklet-server` relay yourself and are responsible for protecting its pairing token and local state directory. We provide no remote or hosted service.
 - **Scope of authorization**: only commands you (or an AI agent you explicitly authorized) issue via `plt`/HTTP are executed. The extension never visits sites on its own; pages are driven by commands.
 - **Third-party risk is yours**: automating third-party sites (logged-in accounts, search engines, APIs) may trigger their risk controls, breach their terms, or lead to account restrictions. You decide what, how and how often to automate and bear the consequences.
 - **Do not leak secrets**: avoid passing passwords or tokens in plaintext in commands; although the command ledger redacts sensitive fields, do not put keys in query parameters.
