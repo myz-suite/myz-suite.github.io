@@ -6,6 +6,28 @@
 - [![](https://img.shields.io/chrome-web-store/v/mhakfcbobhdemicjelhjjpmgibhnnplg)](https://chromewebstore.google.com/detail/mhakfcbobhdemicjelhjjpmgibhnnplg) 
 - [![](https://img.shields.io/badge/dynamic/json?label=edge%20add-on&prefix=v&query=$.version&url=https://microsoftedge.microsoft.com/addons/getproductdetailsbycrxid/fepakkoggnancnpcclldodfbpgobkabj)](https://microsoftedge.microsoft.com/addons/detail/fepakkoggnancnpcclldodfbpgobkabj)
 
+## v0.6.6 — 图片拼接与合成、捕获增强
+
+- 新增独立「MyZ 拼图」页：截图拼接（无缝裁剪 / 过渡混合 / 字幕堆叠 / 简单串联）、拼图（1–16 张网格与特色布局）、展示图（App Store / Google Play / 社交卡片尺寸），配色随主题。
+- 捕获增强：右键保存网页图片、右键或视频右上角悬浮按钮截取视频当前帧；选区截图与整篇截图一并入库；新增本地「图片缓存区」（按选择顺序导入，不参与同步）。
+- 文件名规范化（`myz-<type>-<时间戳>` / `myz-video-<host>-<path>-<时间戳>`）；选区截图加柔光留白。
+- 编辑器桌面端铺满视口、字幕支持批量底部裁切；展示图移除手机外框。
+- 入口：Popup「图片合成」按钮、右键「打开 MyZ 拼图」。
+
+## v0.6.5 — 加密同步设置向导
+
+- 新增独立全屏「同步设置向导」：首次进入加密同步且本机无账号时自动进入，分「加入已有账号 / 新建账号 / 给新设备授权」三条分支，逐步填写并即时校验（含 S3 连接测试）。
+- 邀请串携带非敏感 S3 参数用于新设备预填；访问密钥等敏感项永不入串。
+- 迁移 / 建账号 / 首次同步拆分为幂等步骤，允许稍后同步（设置页显示「未完成同步」徽标）。
+- 设置页移除独立的「设备配对」块，改为状态卡 + 动作 + 可折叠「高级设置」。
+
+## v0.6.4 — EPUB 阅读器、端上翻译与加密同步 v2
+
+- 新增内置 EPUB 阅读器（重排）：本地文件来源、目录解析、阅读进度记忆、选中划线 / 摘录并还原。
+- 新增端上翻译（PDF / EPUB / 网页采集条），基于浏览器内置翻译能力，无网络依赖。
+- 加密同步 v2（E2EE）：设备绑定密钥模型、按设备签名、账号级多流同步、抗回滚与凭证加密落盘。
+- PDF 选区升级为段落 / 栏感知；设计系统令牌化；Inbox v0.5；阅读器大文件性能优化。
+
 ## v0.6.3 — PDF 阅读器导航侧栏与选择修复
 
 - PDF 阅读器新增左侧导航侧栏：可按 PDF 目录（书签）跳转章节，或按页查看标注并精确定位到标注位置；侧栏开关与标签页会记忆。

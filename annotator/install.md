@@ -41,6 +41,10 @@
 
 加密同步使用你自己的 S3 兼容对象存储；我们不提供任何线上服务。云端仅存储密文与必要元信息，同步密钥由你输入的密码派生，我们不保存你的密码。
 
+::: warning 加密同步仍处于实验阶段
+同步功能仍在实验与验证中：机制可能不稳定，升级或切换设备时存在风险。**请务必备份你的数据**（可在 Dashboard 导出），并在依赖同步前充分测试。欢迎通过 [Issue](https://github.com/myz-suite/myz-support/issues) 反馈问题与建议。
+:::
+
 - 推荐：**AWS S3**、**Cloudflare R2**，或其他国内 **S3 兼容**对象存储服务。
 - 填写 Endpoint / Region / Bucket / Access Key / Secret Key（可选 Session Token 与 Prefix）
 - 保存设置后先测试连接，再设置同步密钥并启用同步

@@ -63,6 +63,10 @@ The Dashboard top navigation contains:
 
 Encrypted sync uses your own S3-compatible storage; we do not run any online service. Only ciphertext and minimal metadata are stored remotely, and the sync secret stays on your device. The sync secret is derived from the password you enter, and we do not store that password.
 
+::: warning Encrypted sync is still experimental
+Sync is still experimental and under validation: the mechanism may be unstable, and there is risk when switching or upgrading devices. **Please back up your data** (export from the Dashboard) and test thoroughly before relying on it. Feedback via [issues](https://github.com/myz-suite/myz-support/issues) is welcome.
+:::
+
 Recommended storage: **AWS S3**, **Cloudflare R2**, or any other **S3-compatible** storage provider.
 
 ### 4.5 Setup steps

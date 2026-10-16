@@ -2,6 +2,28 @@
 
 Highlights from recent extension updates.
 
+## v0.6.6 — Image stitching & capture improvements
+
+- New standalone “MyZ Stitch” page: screenshot stitching (seamless crop / blend / subtitle stack / simple concat), collage (1–16 grid & feature layouts), and showcase images (App Store / Google Play / social card sizes); theming follows the app.
+- Capture: right-click to save a page image, or capture the current video frame via the context menu or a floating button at the video’s top-right corner; selection and article screenshots are also staged.
+- New local “image cache” (import in selection order; never synced). Standardized filenames (`myz-<type>-<timestamp>` / `myz-video-<host>-<path>-<timestamp>`).
+- Selection screenshots get a soft padded backdrop; the editor fills the viewport, subtitles support a batch bottom-crop, and the showcase drops the phone frame.
+- Entry points: the popup’s “Image composition” button and the right-click “Open MyZ Stitch”.
+
+## v0.6.5 — Sync setup wizard
+
+- New full-screen sync setup wizard (auto-opens on first use of encrypted sync): three branches — join an existing account, create a new account, or authorize a new device — with inline validation and an S3 connection test.
+- Pairing strings carry only non-sensitive S3 coordinates for prefill; access keys never leave the device.
+- Migration / account creation / first sync are idempotent steps; you can sync later (an “incomplete sync” badge is shown).
+- The settings page replaces the separate “device pairing” block with a status card plus actions and collapsible advanced settings.
+
+## v0.6.4 — EPUB reader, on-device translation & sync v2
+
+- New built-in EPUB reader (reflow): local files, table of contents, reading progress, and select-to-highlight / excerpt with restore.
+- New on-device translation (PDF / EPUB / web capture bar) using the browser’s built-in translation, no network needed.
+- Encrypted sync v2 (E2EE): device-bound key model, per-device signatures, account-level multi-stream sync, rollback protection, and encrypted credentials at rest.
+- PDF selection upgraded to paragraph / column aware; design-system tokens; Inbox v0.5; large-file reader performance work.
+
 ## v0.6.3 — PDF reader sidebar & selection fixes
 
 - New sidebar in the PDF reader: navigate by table of contents (bookmarks), or browse highlights by page and jump precisely to an annotation; the sidebar state and active tab are remembered.

@@ -28,19 +28,20 @@ features:
   - title: Reliable playback
     icon: 🖌️
     details: Highlights are restored automatically when you revisit the page—even across SPA navigation.
-  - title: Multiple highlight styles
-    icon: 🎨
-    details: Marker, underline, and wavy styles with a dark-friendly palette; exports keep the style description.
-  - title: End-to-end encrypted sync
-    icon: 📌
-    details: Bring your own S3-compatible storage; the sync secret never leaves your device.
   - title: PDF reading & annotation
     icon: 📄
     details: Built-in PDF reader with continuous scrolling, zoom, excerpts and notes; highlights restore on reopen.
+  - title: Screenshots & image stitching
+    icon: 🧩
+    details: Save a page image or grab the current video frame into a local cache, then stitch long shots, collages, or showcase images.
 ---
 
 Welcome to MyZ Annotator. Use the buttons above to install the extension from the browser store or open the documentation for installation tips and release notes.
 
 ::: tip Quick start
 Start with the Install guide and User Guide, then configure encrypted sync as needed.
+:::
+
+::: warning Encrypted sync is still experimental
+Sync is still experimental and under validation: the mechanism may be unstable, and there is risk when switching or upgrading devices. **Please back up your data** (export from the Dashboard) and test thoroughly before relying on it. Feedback via [issues](https://github.com/myz-suite/myz-support/issues) is welcome.
 :::
